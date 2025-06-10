@@ -13,8 +13,8 @@ for await (const entry of glob('src/**/*.html')) {
 }
 
 export default defineConfig({
+  base: '/your-repo-name/', 
   plugins: [],
-
   root: resolve(__dirname, 'src'),
   build: {
     emptyOutDir: true,

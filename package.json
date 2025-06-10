@@ -9,7 +9,26 @@
     "preview": "vite preview"
   },
   "devDependencies": {
+    "@tailwindcss/postcss": "^4.1.8",
+    "tailwindcss": "^4.1.8",
     "vite": "^6.3.5"
   },
-  "dependencies": {}
+  "dependencies": {
+    "@supabase/supabase-js": "^2.50.0",
+    "autoprefixer": "^10.4.21",
+    "postcss": "^8.5.4"
+  },
+  "description": "",
+  "main": "vite.config.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FRSOURCE/vite-multipage-starter.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/FRSOURCE/vite-multipage-starter/issues"
+  },
+  "homepage": "https://github.com/FRSOURCE/vite-multipage-starter#readme"
 }
