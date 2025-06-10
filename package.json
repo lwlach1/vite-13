@@ -4,9 +4,8 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview"
+  "build": "vite build",
+  "deploy": "npm run build && gh-pages -d dist"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4.1.8",
@@ -22,13 +21,13 @@
   "main": "vite.config.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/FRSOURCE/vite-multipage-starter.git"
+    "url": "git+https://github.com/lwlach1/vite-13.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/FRSOURCE/vite-multipage-starter/issues"
+    "url": "https://github.com/lwlach1/vite-13/issues"
   },
-  "homepage": "https://github.com/FRSOURCE/vite-multipage-starter#readme"
+  "homepage": "https://github.com/lwlach1/vite-13#readme"
 }
