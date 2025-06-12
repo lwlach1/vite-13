@@ -4,30 +4,19 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-  "build": "vite build",
-  "deploy": "npm run build && gh-pages -d dist"
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
   },
   "devDependencies": {
-    "@tailwindcss/postcss": "^4.1.8",
-    "tailwindcss": "^4.1.8",
+    "autoprefixer": "^10.4.21",
+    "postcss": "^8.5.5",
+    "tailwindcss": "^4.1.9",
     "vite": "^6.3.5"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.50.0",
-    "autoprefixer": "^10.4.21",
-    "postcss": "^8.5.4"
-  },
-  "description": "",
-  "main": "vite.config.js",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/lwlach1/vite-13.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/lwlach1/vite-13/issues"
-  },
-  "homepage": "https://github.com/lwlach1/vite-13#readme"
+    "@tailwindcss/vite": "^4.1.9",
+    "glob": "^11.0.2"
+  }
 }

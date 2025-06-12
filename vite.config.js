@@ -1,26 +1,28 @@
-import { dirname, resolve } from 'node:path'
-import { fileURLToPath } from 'node:url'
-import { defineConfig } from 'vite'
-import { glob } from 'node:fs/promises'
+import { dirname, resolve } from 'node:path';
+import { fileURLToPath } from 'node:url';
+import { defineConfig } from 'vite';
+import { glob } from 'glob';
 
-const __dirname = dirname(fileURLToPath(import.meta.url))
+const __dirname = dirname(fileURLToPath(import.meta.url));
 
-const inputs = [];
-
-for await (const entry of glob('src/**/*.html')) {
-  console.log(resolve(__dirname, entry));
-  inputs.push(resolve(__dirname, entry));
+async function getInputs() {
+  const entries = await glob('src/**/*.html');
+  return entries.map((entry) => resolve(__dirname, entry));
 }
 
-export default defineConfig({
-  base: '/your-repo-name/', 
-  plugins: [],
-  root: resolve(__dirname, 'src'),
-  build: {
-    emptyOutDir: true,
-    rollupOptions: {
-      input: inputs,
+export default defineConfig(async () => {
+  const inputs = await getInputs();
+
+  console.log('HTML inputs:', inputs);
+
+  return {
+    root: resolve(__dirname, 'src'),
+    build: {
+      emptyOutDir: true,
+      rollupOptions: {
+        input: inputs,
+      },
+      outDir: resolve(__dirname, 'dist'),
     },
-    outDir: resolve(__dirname, 'dist'),
-  },
-})
+  };
+});
